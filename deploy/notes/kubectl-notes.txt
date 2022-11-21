@@ -74,3 +74,9 @@ to this:
   ======
 
   kubectl create secret generic stripe-secret --from-literal STRIPE_KEY=sk_test_51M51TNSGcb1LdUE5lBPDNRDhau4wFIMNxiJmRwmDUw7KSs9APTPMecuzOh412TXHfVMrgRQWZ8thWbZgugg7TXTZ00wPlcT7nG
+
+  ===
+
+  Digital Ocean Token
+
+  dop_v1_c6ea9fdfee05a1f84bf9d3975bebce9dc6752ef00aa94c4658530f17a3c9ad16
