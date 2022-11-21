@@ -1,0 +1,76 @@
+kubectl delete $(ls *.yaml | awk ' { print " -f " $1 } ')
+kubectl apply $(ls *.yaml | awk ' { print " -f " $1 } ')
+
+
+gcloud components install gke-gcloud-auth-plugin
+
+gcloud components install kubectl (If you dont have docker installed locally)
+
+gcloud container clusters get-credentials <cluster_name>
+
+# Create a secret
+
+kubectl create secret generic jwt-secret --from-literal=JWT_KEY=veryimpsecret
+
+
+# Type "thisisunsafe" for https browser issue
+
+
+# Next js version
+
+module.exports = {
+  webpack: (config) => {
+    config.watchOptions.poll = 300;
+    return config;
+  },
+};
+
+# frontend/index.js
+const LandingPage = ({ currentUser }) => {
+  console.log(currentUser);
+  axios.get('/api/users/currentuser');
+ 
+  return <h1>Landing Page</h1>;
+};
+to this:
+
+const LandingPage = ({ currentUser }) => {
+  console.log(currentUser);
+  axios.get('/api/users/currentuser').catch((err) => {
+    console.log(err.message);
+  });
+ 
+  return <h1>Landing Page</h1>;
+};
+
+# Install curl on alpine images
+
+apk --no-cache add curl
+
+====
+
+Make sure you update this line:
+
+"files": [
+  "./build/**/*"
+],
+to this:
+
+"files": [
+  "build/**/*"
+],
+
+===
+
+Find the return of the global.signin method and change this:
+
+  return [`express:sess=${base64}`];
+
+to this:
+
+  return [`session=${base64}`];
+
+
+  ======
+
+  kubectl create secret generic stripe-secret --from-literal STRIPE_KEY=sk_test_51M51TNSGcb1LdUE5lBPDNRDhau4wFIMNxiJmRwmDUw7KSs9APTPMecuzOh412TXHfVMrgRQWZ8thWbZgugg7TXTZ00wPlcT7nG
