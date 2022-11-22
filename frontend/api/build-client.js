@@ -1,17 +1,18 @@
-import axios from "axios";
+import axios from 'axios';
 
 export default ({ req }) => {
-  if (typeof window === "undefined") {
+  if (typeof window === 'undefined') {
     // Run on the server
     return axios.create({
       baseURL:
-        "http://ingress-nginx-controller.ingress-nginx.svc.cluster.local",
+        // "http://ingress-nginx-controller.ingress-nginx.svc.cluster.local",
+        'http://test.notebooktime.com',
       headers: req.headers,
     });
   } else {
     // Run on the browser
     return axios.create({
-      baseURL: "/",
+      baseURL: '/',
     });
   }
 };
