@@ -22,10 +22,6 @@ spec:
               secretKeyRef:
                 name: jwt-secret
                 key: JWT_KEY
-        resources:
-          limits:
-            memory: "2048Mi"
-            cpu: "500m"
 ---
 apiVersion: v1
 kind: Service
