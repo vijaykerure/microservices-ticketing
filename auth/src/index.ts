@@ -18,7 +18,7 @@ const start = async () => {
   }
 
   app.listen(3000, () => {
-    console.log('Auth service is listing on PORT 3000..');
+    console.log('Auth service is listing on PORT 3000.');
   });
 };
 

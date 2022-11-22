@@ -50,7 +50,7 @@ const start = async () => {
   }
 
   app.listen(3000, () => {
-    console.log('Orders service is listing on PORT 3000..');
+    console.log('Orders service is listing on PORT 3000.');
   });
 };
 
